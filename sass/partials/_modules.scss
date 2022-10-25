@@ -1,5 +1,27 @@
 @include aoa-bg-series($img__classes,$img__aoa,0,"center","cover","scroll");
-
+@media all and (max-width:991px), all and (orientation:portrait){   
+    @include aoa-bg-series($img__classes--v,$img__aoa--v,0,"center","cover","scroll");
+    .about{
+        &-s1,&-s2{
+            background-color: #ddd!important;
+            background-blend-mode: overlay;
+        }
+        &-s1{
+            background-position: center!important;
+        }
+    }
+    .contact,.index{
+        &-s1{
+            background-color: #ddd!important;
+            background-blend-mode: overlay;
+        }
+    }
+}
+.about{
+    &-s1{
+        background-position-y: top!important;
+    }
+}
 .bg{
     &-blue{
         background-color:$color__blue!important; 
@@ -13,6 +35,11 @@
 .comingsoon{
     &-s1{
         background-position: 10%!important;
+    }
+}
+.contact{
+    &-s1{
+        background-position-x: right!important;
     }
 }
 .navbar{
@@ -33,6 +60,10 @@
         text-shadow: $text__shadow;
     }
 }
+h1,h2,h3,h4,h5,h6,.nav-link{
+    font-family: "Anton";
+    letter-spacing: 2px;
+}
 header{
     z-index: 10;
 }
@@ -43,8 +74,8 @@ textarea{
     .navbar{
         &-nav{
             backdrop-filter: blur(5px); 
-            background-color: #fff;
-            border: 1px solid #999;
+            background-color: #0dcaf0;
+            border: 1px solid darken(#0dcaf0,30%);
             opacity: 0.9;
             padding: 10px;
         }
